@@ -130,7 +130,7 @@ public class ApiConfig {
 
     public void loadConfig(boolean useCache, LoadConfigCallback callback, Activity activity) {
         // Embedded Source : Update in Strings.xml if required
-        String apiUrl = Hawk.get(HawkConfig.API_URL,"https://gitee.com/haitang123/abc/raw/master/o.bmp"，HomeActivity.getRes().getString(R.string.app_source));
+        String apiUrl = Hawk.get(HawkConfig.API_URL,"https://gitee.com/haitang123/abc/raw/master/o.bmp");
         if (apiUrl.isEmpty()) {
             callback.error("-1");
             return;
