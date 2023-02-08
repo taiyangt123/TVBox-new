@@ -98,7 +98,7 @@ public class DriveFolderFile {
     public String getFormattedLastModified() {
         if(this.lastModifiedDate != null) {
             Date date = new Date(this.lastModifiedDate);
-            Format fmt = new SimpleDateFormat("MM/dd/yyyy hh:mm aa");
+            Format fmt = new SimpleDateFormat("MM/dd/yyyy HH:mm aa");
             return fmt.format(date);
         }
         return "";

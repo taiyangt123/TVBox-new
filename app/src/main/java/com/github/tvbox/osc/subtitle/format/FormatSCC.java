@@ -457,7 +457,7 @@ public class FormatSCC implements TimedTextFileFormat {
                 // both can now appear
                 newC.start.mseconds -= 1000 / 29.97;
                 // we correct the frame delay (8080 8080)
-                line += newC.start.getTime("hh:mm:ss:ff/29.97")
+                line += newC.start.getTime("HH:mm:ss:ff/29.97")
                         + "\t942c 942c ";
                 newC.start.mseconds += 1000 / 29.97;
                 // we clear the buffer and start new pop-on caption
@@ -465,13 +465,13 @@ public class FormatSCC implements TimedTextFileFormat {
 
             } else if (oldC.end.mseconds < newC.start.mseconds) {
                 // we clear the screen for new caption
-                line += oldC.end.getTime("hh:mm:ss:ff/29.97")
+                line += oldC.end.getTime("HH:mm:ss:ff/29.97")
                         + "\t942c 942c\n\n";
                 // we add the time to the new line, we clear buffer and start
                 // new caption
                 newC.start.mseconds -= 1000 / 29.97;
                 // we correct the frame delay (8080 8080)
-                line += newC.start.getTime("hh:mm:ss:ff/29.97")
+                line += newC.start.getTime("HH:mm:ss:ff/29.97")
                         + "\t94ae 94ae 9420 9420 ";
                 newC.start.mseconds += 1000 / 29.97;
             } else {
@@ -479,7 +479,7 @@ public class FormatSCC implements TimedTextFileFormat {
                 // and start new caption
                 newC.start.mseconds -= 1000 / 29.97;
                 // we correct the frame delay (8080 8080)
-                line += newC.start.getTime("hh:mm:ss:ff/29.97")
+                line += newC.start.getTime("HH:mm:ss:ff/29.97")
                         + "\t942c 942c 94ae 94ae 9420 9420 ";
                 newC.start.mseconds += 1000 / 29.97;
             }

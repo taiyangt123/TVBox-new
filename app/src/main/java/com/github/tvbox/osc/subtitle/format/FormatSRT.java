@@ -85,9 +85,9 @@ public class FormatSRT implements TimedTextFileFormat {
                             line = br.readLine().trim();
                             String start = line.substring(0, 12);
                             String end = line.substring(line.length() - 12);
-                            Time time = new Time("hh:mm:ss,ms", start);
+                            Time time = new Time("HH:mm:ss,ms", start);
                             caption.start = time;
-                            time = new Time("hh:mm:ss,ms", end);
+                            time = new Time("HH:mm:ss,ms", end);
                             caption.end = time;
                         } catch (Exception e) {
                             tto.warnings += "incorrect time format at line " + lineCounter;
@@ -160,7 +160,7 @@ public class FormatSRT implements TimedTextFileFormat {
                 current.end.mseconds += tto.offset;
             }
             //time is written
-            file.add(index++, current.start.getTime("hh:mm:ss,ms") + " --> " + current.end.getTime("hh:mm:ss,ms"));
+            file.add(index++, current.start.getTime("HH:mm:ss,ms") + " --> " + current.end.getTime("HH:mm:ss,ms"));
             //offset is undone
             if (tto.offset != 0) {
                 current.start.mseconds -= tto.offset;

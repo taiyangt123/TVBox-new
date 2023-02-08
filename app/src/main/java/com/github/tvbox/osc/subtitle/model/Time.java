@@ -31,11 +31,11 @@ public class Time {
     /**
      * Constructor to create a time object.
      *
-     * @param format supported formats: "hh:mm:ss,ms", "h:mm:ss.cs" and "h:m:s:f/fps"
+     * @param format supported formats: "HH:mm:ss,ms", "h:mm:ss.cs" and "h:m:s:f/fps"
      * @param value  string in the correct format
      */
     public Time(String format, String value) {
-        if (format.equalsIgnoreCase("hh:mm:ss,ms")) {
+        if (format.equalsIgnoreCase("HH:mm:ss,ms")) {
             // this type of format:  01:02:22,501 (used in .SRT)
             int h, m, s, ms;
             h = Integer.parseInt(value.substring(0, 2));
@@ -78,14 +78,14 @@ public class Time {
     /**
      * Method to return a formatted value of the time stored
      *
-     * @param  format supported formats: "hh:mm:ss,ms", "h:mm:ss.cs" and "hhmmssff/fps"
+     * @param  format supported formats: "HH:mm:ss,ms", "h:mm:ss.cs" and "hhmmssff/fps"
      * @return formatted time in a string
      */
     public String getTime(String format) {
         //we use string builder for efficiency
         StringBuilder time = new StringBuilder();
         String aux;
-        if (format.equalsIgnoreCase("hh:mm:ss,ms")) {
+        if (format.equalsIgnoreCase("HH:mm:ss,ms")) {
             // this type of format:  01:02:22,501 (used in .SRT)
             int h, m, s, ms;
             h = mseconds / 3600000;
@@ -182,7 +182,7 @@ public class Time {
             aux = String.valueOf(f);
             //if (aux.length()==1) time.append('0');
             time.append(aux);
-        } else if (format.startsWith("hh:mm:ss:ff/")) {
+        } else if (format.startsWith("HH:mm:ss:ff/")) {
             //this format is used in SCC
             int h, m, s, f;
             float fps;

@@ -337,8 +337,8 @@ public class FormatTTML implements TimedTextFileFormat {
         while (itrC.hasNext()) {
             Subtitle caption = itrC.next();
             //we open the subtitle line
-            line = "\t\t\t<p begin=\"" + caption.start.getTime("hh:mm:ss,ms").replace(',', '.') + "\"";
-            line += " end=\"" + caption.end.getTime("hh:mm:ss,ms").replace(',', '.') + "\"";
+            line = "\t\t\t<p begin=\"" + caption.start.getTime("HH:mm:ss,ms").replace(',', '.') + "\"";
+            line += " end=\"" + caption.end.getTime("HH:mm:ss,ms").replace(',', '.') + "\"";
             if (caption.style != null)
                 line += " style=\"" + caption.style.iD + "\"";
             //attributes are done being inserted, if region was implemented it should be added before this.
