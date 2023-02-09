@@ -105,7 +105,7 @@ public class PlayerHelper {
         } else {
             playerFactory = AndroidMediaPlayerFactory.create();
         }
-        int renderType = Hawk.get(HawkConfig.PLAY_RENDER, 0);
+        int renderType = Hawk.get(HawkConfig.PLAY_RENDER, 1);
         RenderViewFactory renderViewFactory = null;
         switch (renderType) {
             case 0:
@@ -155,7 +155,7 @@ public class PlayerHelper {
     }
 
     public static String getRenderName(int renderType) {
-        if (renderType == 1) {
+        if (renderType == 0) {
             return "TextureView";
         } else {
             return "SurfaceView";
