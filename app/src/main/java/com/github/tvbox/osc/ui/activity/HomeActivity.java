@@ -595,7 +595,7 @@ public class HomeActivity extends BaseActivity {
         }
 
         // takagen99: Icon Placement
-        if (Hawk.get(HawkConfig.HOME_SEARCH_POSITION, true)) {
+        if (Hawk.get(HawkConfig.HOME_SEARCH_POSITION, false)) {
             tvFind.setVisibility(View.VISIBLE);
         } else {
             tvFind.setVisibility(View.GONE);
