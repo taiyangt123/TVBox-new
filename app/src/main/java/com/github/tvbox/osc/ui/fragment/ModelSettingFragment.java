@@ -127,7 +127,7 @@ public class ModelSettingFragment extends BaseLazyFragment {
         tvTheme = findViewById(R.id.tvTheme);
         tvTheme.setText(getThemeView(Hawk.get(HawkConfig.THEME_SELECT, 0)));
         tvRender = findViewById(R.id.tvRenderType);
-        tvRender.setText(PlayerHelper.getRenderName(Hawk.get(HawkConfig.PLAY_RENDER, 1)));
+        tvRender.setText(PlayerHelper.getRenderName(Hawk.get(HawkConfig.PLAY_RENDER, 0)));
         tvParseWebView = findViewById(R.id.tvParseWebView);
         tvParseWebView.setText(Hawk.get(HawkConfig.PARSE_WEBVIEW, true) ? "系统自带" : "XWalkView");
         tvSearchView = findViewById(R.id.tvSearchView);

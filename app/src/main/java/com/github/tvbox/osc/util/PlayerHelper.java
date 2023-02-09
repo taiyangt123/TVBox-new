@@ -156,9 +156,9 @@ public class PlayerHelper {
 
     public static String getRenderName(int renderType) {
         if (renderType == 1) {
-            return "SurfaceView";
-        } else {
             return "TextureView";
+        } else {
+            return "SurfaceView";
         }
     }
 
