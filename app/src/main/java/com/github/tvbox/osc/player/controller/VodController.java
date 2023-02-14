@@ -961,7 +961,7 @@ public class VodController extends BaseController {
         Date afterAdd = new Date(t + TimeRemaining);
         SimpleDateFormat timeEnd = new SimpleDateFormat("HH:mm", Locale.ENGLISH);
         if (isPaused) {
-            mTimeEnd.setText("剩余时长：" + PlayerUtils.stringForTime((int) TimeRemaining) + " | 结束时间：" + timeEnd.format(afterAdd));
+            mTimeEnd.setText("Remaining time：" + PlayerUtils.stringForTime((int) TimeRemaining) + " | 结束时间：" + timeEnd.format(afterAdd));
         } else {
             mTimeEnd.setText("结束时间：" + timeEnd.format(afterAdd));
         }
