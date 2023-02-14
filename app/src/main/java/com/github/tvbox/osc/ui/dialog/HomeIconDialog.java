@@ -36,8 +36,8 @@ public class HomeIconDialog extends BaseDialog {
             @Override
             public void onClick(View v) {
                 FastClickCheckUtil.check(v);
-                Hawk.put(HawkConfig.HOME_SEARCH_POSITION, !Hawk.get(HawkConfig.HOME_SEARCH_POSITION, false));
-                tvHomeSearch.setText(Hawk.get(HawkConfig.HOME_SEARCH_POSITION, false) ? "上方" : "下方");
+                Hawk.put(HawkConfig.HOME_SEARCH_POSITION, !Hawk.get(HawkConfig.HOME_SEARCH_POSITION, true));
+                tvHomeSearch.setText(Hawk.get(HawkConfig.HOME_SEARCH_POSITION, true) ? "上方" : "下方");
             }
         });
         findViewById(R.id.llMenu).setOnClickListener(new View.OnClickListener() {
