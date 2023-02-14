@@ -48,7 +48,7 @@ public class VideoViewConfig {
         }
         if (builder.mRenderViewFactory == null) {
             //默认使用TextureView渲染视频
-            mRenderViewFactory = TextureRenderViewFactory.create();
+            mRenderViewFactory = SurfaceRenderViewFactory.create();
         } else {
             mRenderViewFactory = builder.mRenderViewFactory;
         }
